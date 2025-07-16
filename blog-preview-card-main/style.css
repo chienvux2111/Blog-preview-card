@@ -1,0 +1,118 @@
+:root {
+    --c-yellow: hsl(47, 88%, 63%);
+    --c-white: hsl(0, 0%, 100%);
+    --c-grey: hsl(0, 0%, 50%);
+    --c-black: hsl(0, 0%, 7%);
+    --f-body: "Figtree", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* không hiểu tại sao lại cho width = 100%? `*/
+    width: 100%;
+    background-color: var(--c-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: 100vh; 
+    /* Không hiểu tại sao unit lại là vh? */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.card{
+    max-width: 375px;
+    height: auto;
+    padding: 1rem;
+    border: solid 1.5px;
+    border-radius: 20px;
+    background-color: var(--c-white);
+    font-family: var(--f-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    filter: drop-shadow(0.5rem 0.5rem);
+
+}
+
+.card-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+.card-image img{
+    border-radius: 10px;
+}
+.card-detail-metadata a{
+    background-color: var(--c-yellow);
+    line-height: 150%;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.card-detail-metadata a:hover{
+    background-color: var(--c-black);
+    color: var(--c-yellow);
+    transition-duration: 0.3s;
+    transition-property: all
+}
+.card-detail-metadata p{
+    margin-top: 16px;
+}
+.card-detail-heading a{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.card-detail-heading{
+    margin: 5px 0;
+    color: var(--c-black);
+}
+.card-detail-heading:hover{
+    color: var(--c-yellow);
+    transition-duration: 0.3s;
+    transition-property: all
+}
+
+.card-detail-content p{
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(128, 128, 128);
+    }
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* Canh trái nội dung */
+  gap: 16px;
+  width: 100%;
+}
+
+.card-footer img{
+    height: 48px;
+    width: 48px;
+}
+
+.card-footer p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;  
+}
+
